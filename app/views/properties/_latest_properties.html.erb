@@ -1,0 +1,12 @@
+<% @properties.each do |property|%>
+<div class="col-3">
+    <h3><%= link_to((property.name),property_path(property))%></h3>
+    <p><%= property.price%></p>
+    <div class="amenities">
+    </div>
+</div>  
+<%end%>
+
+
+
+    

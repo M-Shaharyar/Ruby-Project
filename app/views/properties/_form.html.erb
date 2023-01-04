@@ -7,6 +7,11 @@
   </div>
 
   <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class:"form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :price %>
     <%= form.number_field :price, class:"form-control" %>
   </div>
@@ -21,13 +26,37 @@
     <%= form.number_field :bathrooms, class:"form-control" %>
   </div>
 
+
   <div class="form-group">
+    <%= form.label :datails %>
+    <%= form.text_area :datails, class:"form-control" %>
+  </div>
+
+   <div class="form-group">
+    <%= form.label :parking_spaces %>
+    <%= form.number_field :parking_spaces, class:"form-control" %>
+  </div>
+
+  <%
+=begin%>
+ <div class="form-group">
     <%= form.label :photo %>
     <%= form.file_field :photo,class: "form-control" %>
     <%= form.hidden_field :photo_cache %>
-  </div>
 
+    <% if @property.photo.present? %>
+      <%= image_tag @property.photo.thumb.url, class:"mt-2"%>
+    <%end%>
+  </div> 
+<%
+=end%>
 
+    <div class="form-group">
+      <%= form.label :photo%>
+      <%= form.file_field :photo%>
+    </div>
+
+  
 
   
   <div class="form-group">
